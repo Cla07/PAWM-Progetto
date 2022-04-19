@@ -1,0 +1,58 @@
+{% extends 'comune.html' %}
+
+{% block content %}
+
+<div class="container my-5 text-center" style="max-width:580px">
+    
+  <h2>Benvenuto all'autosalone del Cla!</h2>
+  <p class="lead">
+      Puoi acquistare l'auto che fa per te! </p>
+      <a href="auto/getAuto" class="btn btn-primary">Visualizza auto</a>
+    
+  
+</div>
+<br>
+<!--SLIDESHOW Carousel-->
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel" >
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      {% load static %}
+      <img src="{% static 'appauto\slide1.png' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <p>Una macchina veloce, l'orizzonte lontano e una donna da amare alla fine della strada.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      {% load static %}
+      <img src="{% static 'appauto\slide2.png' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>BMW</h5>
+        <p>Velocità e rombo del motore fanno l'emozione</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      {% load static %}
+      <img src="{% static 'appauto\slide3.png' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <p>The black, the speed..</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+    {% endblock %}

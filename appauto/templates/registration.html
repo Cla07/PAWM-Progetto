@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <style>
+     body{
+            background-image: 'static/appauto/sfondoLogin'
+        }
+        input{
+            margin-top:20px;
+            height: 30px;
+            width: 150px;
+            border-radius: 5px;
+             
+        }
+        input[type="submit"]{
+            background-color: rgba(7, 179, 185, 0.753);
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 5px;
+        }
+ 
+    </style>
+</head>
+<body>
+ 
+<form action="postRegistration" method="post">
+    {% csrf_token %}
+    <br/>
+      <h1>Registrazione</h1>
+      
+<p>Prego, compila i seguenti campi</p>
+ 
+ 
+    <label for="username">Username</label>
+    <input type="name" id="Username" name="name" placeholder="Username"><br><br>
+    <!-- Email: -->
+    <label for="Email" >Email</label>
+    <input type="email" id="Email" name="email" placeholder="Email"><br><br>
+    <!-- Password: -->
+    <label for="Password">Password</label>
+    <input type="password" id="Password" name="pass" placeholder="Password"><br><br>
+    <!-- Ripetizione Password: -->
+    <label for="confirm_password">Conferma Password</label>
+    <input type="password" id="confirm_password" name="ripeti password" placeholder="Ripeti Password"><br><br>
+    
+    <label>
+      <input type="checkbox" checked="checked" name="ricordami" style="margin-bottom:15px"> Ricordami
+    </label>
+     
+    <input type="submit" value="Registrati"><br><br>
+ 
+</form>
+</body>
+</html>

@@ -1,0 +1,103 @@
+{% if message %}  <!--Se credenzali errate-->
+<script>
+  alert('{{ message }}')
+</script>
+{% endif %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<style>
+body{
+  background-image: url(https://images.pexels.com/photos/248747/pexels-photo-248747.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+   /* Full height */
+   height: 100%;
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: 100%;
+}
+
+input{
+            margin-top:20px;
+            height: 30px;
+            width: 150px;
+            border-radius: 5px;
+             
+}
+input[type="submit"]{
+            background-color: rgba(7, 179, 185, 0.753);
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 5px;
+        }
+
+
+</style>
+
+<body>
+
+<div style="position: relative; width: 350px; top: 20px;left: 50px">
+  <!--Posizione del div-->
+
+  <font color="blue">
+    <h1> Benvenuto!
+  </font>
+  </h1>
+  <!--Colore del testo-->
+  <br>
+  <font color="red">
+    <h2>Loggati per entrare nel salone
+  </font>
+  </h2>
+  <br> <br>
+  <form action="home" method="post">
+    <!--la / serve per tornare alla home  è il percorso dell'url-->
+    {% csrf_token %}
+
+    <font color="white">
+      <h2><label for="Email">Email</label> </h2>
+    </font>
+
+    <input type="email" id="Email" name="email"> <br> <br>
+
+    <font color="white">
+      <h2><label for="Password">Password</label> </h2>
+    </font>
+    <input type="password" id="pasw" name="password"> <br> <br>
+    <!--password deve corrispondere il nome nella views postLogin -->
+    <div style="position: relative; width: 300px; left: -60px;">
+
+      <font color="white">
+        <input type="checkbox" checked="checked" name="ricordami">Ricordami
+      </font>
+
+    </div>
+
+    <input type="submit" value="Login">
+
+
+    <div>
+      <div style="position: relative; width: 350px; top: 20px;left: 10px">
+        <a type="button" href="{% url 'registration' %}" style="color:white">
+          <h3>Registrati </h3>
+        </a>
+      </div>
+    </div>
+
+  </form>
+
+</div>
+
+
+</body>
+</html>
+
+

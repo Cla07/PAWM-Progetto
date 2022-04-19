@@ -1,0 +1,65 @@
+{% extends 'comune.html' %}
+
+{% block content %}
+<style>
+  body{
+    background-image: url(https://images.pexels.com/photos/1679719/pexels-photo-1679719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+     
+     height: 100%;
+  
+ 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  }
+  </style>
+
+<div style= "position:relative; width:300px; left:40%; top:20px" >
+<!--Barra di ricerca auto -->
+<form class="d-flex" method="POST" action="{% url 'cercaAuto' %}">
+  {% csrf_token %}
+   <input class="form-control me-2" type="search" placeholder="Dettagli auto per marca" aria-label="cerca" name="ricercata">
+   <button class="btn btn-outline-secondary" type="submit">Cerca</button>
+   
+ </form>
+</div>
+
+<br>
+
+<div>
+<div style="position: relative; width: 350px; top: 20px;left: 800px">
+  <h2>
+    <font color="red"> <p class="fw-bold">Auto disponibili</p>  </font>
+    <br> 
+  </h2>
+</div>
+</div>
+
+<!---CARD DINAMICHE-->
+
+<div class="container"> 
+
+    <div class="row">
+     <!--Scorro le auto del database con for-->
+       {% for auto in auto %}
+        <div class="col">
+        
+            <div class="card" style="width: 18rem; height:100% ;">
+                
+                <img src="{{ auto.immagine.url }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4> <font color="red" class="card-title">{{ auto.marca }}  </font></h4>  <!--Valore dinamico-->
+                  <h5><p class="card-text">{{ auto.modello}} </p> </h5>
+              
+
+                </div>
+              </div>
+             
+        </div>
+        {% endfor %}
+ 
+    </div>
+   
+  </div>
+
+  {% endblock %}
