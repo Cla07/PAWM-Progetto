@@ -5,7 +5,7 @@ Progetto sito web
 Questo progetto consiste nella presentazione di un sito web, 
 sviluppato con il framework Django ed il linguaggio Python. 
 
-<img src="https://miro.medium.com/max/1200/1*slHeZngyeUr7ypEz7MNL5w.png" >
+<img src="https://www.amplysoft.com/chmod777/knowledge/image/images/python-django.png" >
 
 Viene utilizzato Django in quanto molto efficiente e scalabile, 
 inoltre permette lo sviluppo tramite il pattern MVC (Model-View-Controller),
@@ -18,15 +18,18 @@ quindi, come viene visualizzato il modello e le views che corrisponde al control
 Le views in Django sono delle funzioni che prendono una richiesta (request) come, ad esempio, 
 l’url e restituiscono una risposta (response), cioè una pagina HTML.
 
-<img src= "https://mdn.mozillademos.org/files/13931/basic-django.png" max-width: 960px; max-height:540>
+<img src= "https://mdn.mozillademos.org/files/13931/basic-django.png">
 
 Come database viene utilizzato MySQL, che utilizza SQL, basato sul modello relazionale DBMS. Tutto ruota attorno il concetto di “tabella” e relazioni tra esse. 
-<img src = "https://i1.wp.com/www.kallo.it/wp-content/uploads/2016/07/mysql-logo.jpg?fit=1020%2C426&ssl=1">
+
+<img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsEvPZ-B34DZ5UJkkjlJYYsX890Gys6RGvhIl66zKupXKD_opmmLGhlgJhRMW3cJoaHY&usqp=CAU">
+
 Pe quanto riguarda la parte grafica e quindi i template è stato utilizzato il linguaggio di markup HTML unito ai fogli di stile CSS, ed utilizzata la libreria di Bootstrap.
-<img src= "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png"
+
+<img src= "https://techblog.sdstudio.top/wp-content/uploads/2021/12/f3bf3aeda8c8f3ac0cb73172195a9ee4-1-750x350.png">
      
-Per la parte di Login viene utilizzato Firebase e la libreria per Django “pyrebase 4”. 
-<img src="https://blog.saverioriotto.it/files/uploads/news/medium/7441626098644.jpg">
+Per la parte di Login viene utilizzato Firebase e la libreria per Django “pyrebase"
+<img src= "https://upload.wikimedia.org/wikipedia/commons/b/bd/Firebase_Logo.png">
 
 ## Entriamo nel dettaglio  
 Nello specifico tale sito web rappresenta un salone di vendita di automobili. 
@@ -48,6 +51,7 @@ e utilizzare il paradigma REST ed i suoi principi:
 come ad esempio l’architettura client-server, inoltre, 
 importanti sono le chiamate stateless, 
 e quindi fornire le API stateless.
+
 <img src= "https://www.rlogical.com/wp-content/uploads/2021/08/rest-api-model.png">
 
 Nel file settings.py troviamo le configurazioni, 
