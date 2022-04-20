@@ -54,6 +54,3 @@ e quindi fornire le API stateless.
 
 <img src= "https://www.rlogical.com/wp-content/uploads/2021/08/rest-api-model.png">
 
-Nel file settings.py troviamo le configurazioni, 
-mentre nel file urls.py 
-troviamo tutti i percorsi e quindi tutte le rotte della nostra applicazione. 
