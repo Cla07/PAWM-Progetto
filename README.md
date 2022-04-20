@@ -18,7 +18,7 @@ quindi, come viene visualizzato il modello e le views che corrisponde al control
 Le views in Django sono delle funzioni che prendono una richiesta (request) come, ad esempio, 
 l’url e restituiscono una risposta (response), cioè una pagina HTML.
 
-<img src= "https://mdn.mozillademos.org/files/13931/basic-django.png">
+<img src= "https://mdn.mozillademos.org/files/13931/basic-django.png" max-width: 960px; max-height:540>
 
 Come database viene utilizzato MySQL, che utilizza SQL, basato sul modello relazionale DBMS. Tutto ruota attorno il concetto di “tabella” e relazioni tra esse. 
 <img src = "https://i1.wp.com/www.kallo.it/wp-content/uploads/2016/07/mysql-logo.jpg?fit=1020%2C426&ssl=1">
