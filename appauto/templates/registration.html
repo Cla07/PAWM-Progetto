@@ -3,23 +3,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign Up</title>
+    <title>Registration</title>
     <style>
      body{
-            background-image: 'static/appauto/sfondoLogin'
+            background-image: url('https://images.pexels.com/photos/919073/pexels-photo-919073.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+
         }
         input{
+            color: white;
             margin-top:20px;
             height: 30px;
             width: 150px;
             border-radius: 5px;
-             
         }
         input[type="submit"]{
             background-color: rgba(7, 179, 185, 0.753);
             color: rgb(255, 255, 255);
             border: none;
             border-radius: 5px;
+            position: relative;
+            left: 70px;
         }
  
     </style>
@@ -29,11 +32,13 @@
 <form action="postRegistration" method="post">
     {% csrf_token %}
     <br/>
-      <h1>Registrazione</h1>
-      
-<p>Prego, compila i seguenti campi</p>
+    <div style="position: relative; width: 350px; top: 0px;left: 50px">
+    <font color="red"> <h1>Registrazione</h1> </font>
+    <font color="green"> <p>Prego, compila i seguenti campi</p>  </font>  
+
  
- 
+
+<font color="white">
     <label for="username">Username</label>
     <input type="name" id="Username" name="name" placeholder="Username"><br><br>
     <!-- Email: -->
@@ -45,8 +50,8 @@
     <!-- Ripetizione Password: -->
     <label for="confirm_password">Conferma Password</label>
     <input type="password" id="confirm_password" name="ripeti password" placeholder="Ripeti Password"><br><br>
-    
-     
+    </font>
+</div>
     <input type="submit" value="Registrati"><br><br>
  
 </form>
