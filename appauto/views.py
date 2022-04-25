@@ -30,7 +30,7 @@ def home (request):
 def auto (request):
     return render(request,'auto.html')
 
-#Definisco le rotte REST per le auto 
+
 def login(request) : 
     return render(request, 'login.html')
 
