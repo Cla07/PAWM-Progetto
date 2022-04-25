@@ -1,6 +1,4 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from rest_framework.response import Response
-from rest_framework.decorators import api_view
 from .models import Auto
 from .forms import AutoForm
 from django.views.generic import ListView, DetailView
@@ -73,7 +71,6 @@ def postRegistration(request):
     return render(request,'login.html')
 
 #restituisce tutte le auto 
-@api_view(['GET'])
 def getListaAuto(request):
     auto = Auto.objects.all()
     return render(request,'auto.html', {'auto':auto} )
